@@ -68,16 +68,16 @@ class Wmpci_Admin {
 	function wmpci_validate_options( $input ) {
 
 		$input['wmpci_popup_cnt']		= isset($input['wmpci_popup_cnt']) ? wmpci_slashes_deep( $input['wmpci_popup_cnt'], true ) : '';
-		$input['wmpci_mainheading'] 	= isset($input['wmpci_mainheading']) 	? trim($input['wmpci_mainheading']) 		: '';
-		$input['wmpci_subheading']   	= isset($input['wmpci_subheading']) 	? trim($input['wmpci_subheading']) 		: '';
+		$input['wmpci_mainheading'] 	= isset($input['wmpci_mainheading']) 	? sanitize_text_field($input['wmpci_mainheading']) 		: '';
+		$input['wmpci_subheading']   	= isset($input['wmpci_subheading']) 	? sanitize_text_field($input['wmpci_subheading']) 		: '';
 		$input['wmpci_popup_delay']		= (is_numeric($input['wmpci_popup_delay'])) 	? trim($input['wmpci_popup_delay']) 	: 0;
 		$input['wmpci_popup_exp']		= (is_numeric($input['wmpci_popup_exp'])) 		? trim($input['wmpci_popup_exp']) 		: 0;
 		$input['wmpci_popup_disappear']	= (is_numeric($input['wmpci_popup_disappear'])) ? trim($input['wmpci_popup_disappear']) : 0;
 		$input['close_on_esc'] 			= isset($input['close_on_esc']) 	? 1 : 0;
 		$input['hide_close_btn'] 		= isset($input['hide_close_btn']) 	? 1 : 0;
 		$input['enable_popup'] 			= isset($input['enable_popup']) 	? 1 : 0;
-		$input['popup_height'] 			= isset($input['popup_height']) 	? trim($input['popup_height']) 		: '';
-		$input['popup_width'] 			= isset($input['popup_width']) 		? trim($input['popup_width']) 		: '';
+		$input['popup_height'] 			= isset($input['popup_height']) 	? sanitize_text_field($input['popup_height']) 		: '';
+		$input['popup_width'] 			= isset($input['popup_width']) 		? sanitize_text_field($input['popup_width']) 		: '';
 		$input['popup_bgcolor'] 		= isset($input['popup_bgcolor'])	? trim($input['popup_bgcolor']) 	: '';
 		$input['popup_fontcolor'] 		= isset($input['popup_fontcolor'])	? trim($input['popup_fontcolor']) 	: '';
 		$input['popup_border_width']	= (is_numeric($input['popup_border_width'])) ? trim($input['popup_border_width']) : '';

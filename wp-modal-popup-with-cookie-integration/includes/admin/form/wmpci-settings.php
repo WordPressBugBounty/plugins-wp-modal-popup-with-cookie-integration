@@ -71,7 +71,7 @@ if( isset($_GET['settings-updated']) && $_GET['settings-updated'] == 'true' ) {
 										<label for="wmpci-mainheading"><?php _e('Main Heading', 'wp-modal-popup-with-cookie-integration'); ?>:</label>
 									</th>
 									<td>
-										<input type="text" name="wmpci_options[wmpci_mainheading]" value="<?php echo wmpci_get_option('wmpci_mainheading'); ?>" class="wmpci-wmpci_mainheading large-text" id="wmpci-wmpci_mainheading" /><br/>
+										<input type="text" name="wmpci_options[wmpci_mainheading]" value="<?php echo esc_attr(wmpci_get_option('wmpci_mainheading')); ?>" class="wmpci-wmpci_mainheading large-text" id="wmpci-wmpci_mainheading" /><br/>
 										<span class="description"><?php _e('Enter the main heading- eg. GET 10% OFF', 'wp-modal-popup-with-cookie-integration'); ?></span>
 									</td>
 								</tr>
@@ -81,7 +81,7 @@ if( isset($_GET['settings-updated']) && $_GET['settings-updated'] == 'true' ) {
 										<label for="wmpci-subheading"><?php _e('Sub Heading', 'wp-modal-popup-with-cookie-integration'); ?>:</label>
 									</th>
 									<td>
-										<input type="text" name="wmpci_options[wmpci_subheading]" value="<?php echo wmpci_get_option('wmpci_subheading'); ?>" class="wmpci-wmpci_subheading large-text" id="wmpci-wmpci_subheading" /><br/>
+										<input type="text" name="wmpci_options[wmpci_subheading]" value="<?php echo esc_attr(wmpci_get_option('wmpci_subheading')); ?>" class="wmpci-wmpci_subheading large-text" id="wmpci-wmpci_subheading" /><br/>
 										<span class="description"><?php _e('Enter the sub heading - eg.  Now purchase anything site-wide', 'wp-modal-popup-with-cookie-integration'); ?></span>
 									</td>
 								</tr>
@@ -201,8 +201,8 @@ if( isset($_GET['settings-updated']) && $_GET['settings-updated'] == 'true' ) {
 										<label for="wmpci-popup-height"><?php _e('Popup Height and Width', 'wp-modal-popup-with-cookie-integration'); ?>:</label>
 									</th>
 									<td>
-										<input type="text" name="wmpci_options[popup_height]" value="<?php echo $wmpci_options['popup_height']; ?>" class="wmpci-popup-height" id="wmpci-popup-height" size="6" /> <label for="wmpci-popup-height"><?php _e('Height', 'wp-modal-popup-with-cookie-integration'); ?></label> &nbsp;&nbsp;
-										<input type="text" name="wmpci_options[popup_width]" value="<?php echo $wmpci_options['popup_width']; ?>" class="wmpci-popup-width" id="wmpci-popup-width" size="6" /> <label for="wmpci-popup-width"><?php _e('Width', 'wp-modal-popup-with-cookie-integration'); ?></label> <br/>
+										<input type="text" name="wmpci_options[popup_height]" value="<?php echo esc_attr($wmpci_options['popup_height']); ?>" class="wmpci-popup-height" id="wmpci-popup-height" size="6" /> <label for="wmpci-popup-height"><?php _e('Height', 'wp-modal-popup-with-cookie-integration'); ?></label> &nbsp;&nbsp;
+										<input type="text" name="wmpci_options[popup_width]" value="<?php echo esc_attr($wmpci_options['popup_width']); ?>" class="wmpci-popup-width" id="wmpci-popup-width" size="6" /> <label for="wmpci-popup-width"><?php _e('Width', 'wp-modal-popup-with-cookie-integration'); ?></label> <br/>
 										<span class="description"><?php _e('Enter custom height and width for popup. Leave empty to use default. (i.e 600px OR 60%)', 'wp-modal-popup-with-cookie-integration'); ?></span>
 									</td>
 								</tr>
@@ -213,10 +213,10 @@ if( isset($_GET['settings-updated']) && $_GET['settings-updated'] == 'true' ) {
 									</th>
 									<td>
 										<?php if( $wp_version >= 3.5 ) { ?>
-											<input type="text" value="<?php echo $wmpci_options['popup_bgcolor']; ?>" id="wmpci-popup-bgcolor" name="wmpci_options[popup_bgcolor]" class="wmpci-color-box" /><br/>
+											<input type="text" value="<?php echo esc_attr($wmpci_options['popup_bgcolor']); ?>" id="wmpci-popup-bgcolor" name="wmpci_options[popup_bgcolor]" class="wmpci-color-box" /><br/>
 										<?php } else { ?>
 											<div style='position:relative;'>
-												<input type='text' value="<?php echo $wmpci_options['popup_bgcolor']; ?>" id="wmpci-color-box-farbtastic-inp" name="wmpci_options[popup_bgcolor]" class="wmpci-color-box-farbtastic-inp" data-default-color="" />
+												<input type='text' value="<?php echo esc_attr($wmpci_options['popup_bgcolor']); ?>" id="wmpci-color-box-farbtastic-inp" name="wmpci_options[popup_bgcolor]" class="wmpci-color-box-farbtastic-inp" data-default-color="" />
 												<input type="button" class="wmpci-color-box-farbtastic button button-secondary" value="<?php _e('Select Color', 'wp-modal-popup-with-cookie-integration'); ?>" />
 												<div class="colorpicker" style="background-color: #666; z-index:100; position:absolute; display:none;"></div>
 											</div>
@@ -231,10 +231,10 @@ if( isset($_GET['settings-updated']) && $_GET['settings-updated'] == 'true' ) {
 									</th>
 									<td>
 										<?php if( $wp_version >= 3.5 ) { ?>
-											<input type="text" value="<?php echo wmpci_get_option('popup_fontcolor'); ?>" id="wmpci-popup-fontcolor" name="wmpci_options[popup_fontcolor]" class="wmpci-color-box" /><br/>
+											<input type="text" value="<?php echo esc_attr(wmpci_get_option('popup_fontcolor')); ?>" id="wmpci-popup-fontcolor" name="wmpci_options[popup_fontcolor]" class="wmpci-color-box" /><br/>
 										<?php } else { ?>
 											<div style='position:relative;'>
-												<input type='text' value="<?php echo wmpci_get_option($wmpci_options['popup_fontcolor']); ?>" id="wmpci-color-box-farbtastic-inp" name="wmpci_options[popup_fontcolor]" class="wmpci-color-box-farbtastic-inp" data-default-color="" />
+												<input type='text' value="<?php echo esc_attr(wmpci_get_option($wmpci_options['popup_fontcolor'])); ?>" id="wmpci-color-box-farbtastic-inp" name="wmpci_options[popup_fontcolor]" class="wmpci-color-box-farbtastic-inp" data-default-color="" />
 												<input type="button" class="wmpci-color-box-farbtastic button button-secondary" value="<?php _e('Select Color', 'wp-modal-popup-with-cookie-integration'); ?>" />
 												<div class="colorpicker" style="background-color: #666; z-index:100; position:absolute; display:none;"></div>
 											</div>
@@ -269,10 +269,10 @@ if( isset($_GET['settings-updated']) && $_GET['settings-updated'] == 'true' ) {
 									</th>
 									<td>
 										<?php if( $wp_version >= 3.5 ) { ?>
-											<input type="text" value="<?php echo $wmpci_options['popup_border_color']; ?>" id="wmpci-popup-bgcolor" name="wmpci_options[popup_border_color]" class="wmpci-color-box" /><br/>
+											<input type="text" value="<?php echo esc_attr($wmpci_options['popup_border_color']); ?>" id="wmpci-popup-bgcolor" name="wmpci_options[popup_border_color]" class="wmpci-color-box" /><br/>
 										<?php } else { ?>
 											<div style='position:relative;'>
-												<input type='text' value="<?php echo $wmpci_options['popup_border_color']; ?>" id="wmpci-color-box-farbtastic-inp" name="wmpci_options[popup_border_color]" class="wmpci-color-box-farbtastic-inp" data-default-color="" />
+												<input type='text' value="<?php echo esc_attr($wmpci_options['popup_border_color']); ?>" id="wmpci-color-box-farbtastic-inp" name="wmpci_options[popup_border_color]" class="wmpci-color-box-farbtastic-inp" data-default-color="" />
 												<input type="button" class="wmpci-color-box-farbtastic button button-secondary" value="<?php _e('Select Color', 'wp-modal-popup-with-cookie-integration'); ?>" />
 												<div class="colorpicker" style="background-color: #666; z-index:100; position:absolute; display:none;"></div>
 											</div>

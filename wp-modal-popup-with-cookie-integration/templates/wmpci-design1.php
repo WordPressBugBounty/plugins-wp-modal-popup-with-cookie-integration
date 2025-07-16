@@ -20,11 +20,11 @@ if ( !defined( 'ABSPATH' ) ) exit;
 		<div class="wpmci-popup-cnt-wrp">
 			<div class="wpmci-popup-cnt-inr-wrp wmpci-clearfix">
 			<?php if( !empty($wmpci_options['wmpci_mainheading']) ) { ?>
-					<h2><?php echo $wmpci_options['wmpci_mainheading']; ?></h2>
+					<h2><?php echo esc_html($wmpci_options['wmpci_mainheading']); ?></h2>
 				<?php } ?>
 				
 				<?php if( !empty($wmpci_options['wmpci_subheading']) ) { ?>
-					<h4><?php echo $wmpci_options['wmpci_subheading']; ?></h4>
+					<h4><?php echo esc_html($wmpci_options['wmpci_subheading']); ?></h4>
 				<?php } ?>
 				<?php echo do_shortcode ( wpautop( $wmpci_options['wmpci_popup_cnt'] ) ); ?>
 			</div>

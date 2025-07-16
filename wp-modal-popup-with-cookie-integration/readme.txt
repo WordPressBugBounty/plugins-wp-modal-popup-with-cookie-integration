@@ -3,7 +3,7 @@
 Contributors: astoundify
 Tags: advertise, lightbox, marketing, pop over, pop-up, popover, popup, subsription popup, shortcode popup, promotion, cookie popup, age restriction popup, automatic popup, exit popup, fly-in, full screen popup, html popup, layer popup, lead, lightbox popup, Mailing list pop-up, modal, modal window, notification bar, optin, optinmonster, pop over, pop-up, popover, popup, popup builder, popup contact form, popup form, popup lock, popup subscription, Responsive Popup, simple popup, social popup, video popup, wordpress popup, youtube popup
 Requires at least: 4.0
-Tested up to: 6.0.1
+Tested up to: 6.8
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -101,6 +101,10 @@ If you like this plugin, consider exploring our other themes and plugins:
 * [reCAPTCHA](https://wordpress.org/plugins/astoundify-recaptcha/) Google reCAPTCHA for WordPress. Currently supports: WordPress Login/Register, WooCommerce Login/Register, WP Job Manager (Submission Form), Claim Listing for WP Job Manager, Gravity Forms, Ninja Forms, Contact Form 7.
 
 == Changelog ==
+
+= 2.5 (16th, July 2025) =
+* Tested with WordPress 6.8.1 and PHP 8
+* Fixed Vulnerability issue
 
 = 2.4 (22, July 2022) =
 * [*] Tested with WordPress 6.0.1
